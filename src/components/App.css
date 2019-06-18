@@ -1,0 +1,12 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.app__page {
+  display: flex;
+  flex-grow: 1;
+}
+.app__sidebar {
+  width: 230px;
+}
