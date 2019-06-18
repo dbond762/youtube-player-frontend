@@ -8,20 +8,12 @@ class VideoListContainer extends Component {
   }
 
   componentDidMount() {
-    /*
-    fetch(`/search/${this.props.query}`).then((resp) => {
-      console.log(resp);
-    });
-    */
-
-    this.setState({
-      videos: [
-        { id: 1, name: 'Video 1' },
-        { id: 2, name: 'Video 2' },
-        { id: 3, name: 'Video 3' },
-        { id: 4, name: 'Video 4' },
-        { id: 5, name: 'Video 5' },
-      ],
+    fetch(`http://localhost:8080/search/${this.props.query}`).then((resp) => {
+      return resp.json();
+    }).then((videos) => {
+      this.setState({
+        videos: videos,
+      });
     });
   }
 

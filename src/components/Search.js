@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import store from '../store';
 
 class Search extends Component {
   state = {
@@ -14,6 +17,10 @@ class Search extends Component {
 
   search = (event) => {
     this.props.history.push(`/search/${this.state.query}`);
+    store.dispatch({
+      type: 'PUSH_SEARCH_HISTORY',
+      query: this.state.query,
+    });
     event.preventDefault();
   };
 
@@ -27,4 +34,10 @@ class Search extends Component {
   }
 }
 
-export default withRouter(Search);
+const mapStateToProps = function(store) {
+  return {
+    searchHistory: store.searchHistory,
+  };
+}
+
+export default connect(mapStateToProps)(withRouter(Search));

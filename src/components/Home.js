@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
+import VideoListContainer from './VideoListContainer';
+
 class Home extends Component {
   render() {
     return (
-      <div className={`home ${this.props.className}`}>
-        <span>Welcome</span>
-      </div>
+      <VideoListContainer query="" className={this.props.className} />
     );
   }
 }
