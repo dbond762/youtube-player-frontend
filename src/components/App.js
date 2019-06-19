@@ -7,6 +7,8 @@ import Home from './Home';
 import Likes from './Likes';
 import './App.css';
 import SearchContent from './SearchContent';
+import LoginPage from './LoginPage';
+import SignUpPage from './SignUpPage';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route exact path="/" component={() => <Home className="app__content" />} />
             <Route path="/likes" component={() => <Likes className="app__content" />} />
             <Route path="/search/:query" component={() => <SearchContent className="app__content" />} />
+            <Route path="/login" component={() => <LoginPage className="app__content" />} />
+            <Route path="/signup" component={() => <SignUpPage className="app__content" />} />
           </Switch>
         </div>
       </Router>
