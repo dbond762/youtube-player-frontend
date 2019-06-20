@@ -5,10 +5,10 @@ class LogoutButton extends Component {
     return (
       <div className={`user-data ${this.props.className}`}>
         <span className="user-data__user">{this.props.user.login}</span>
-        <input type="button" className="user-data__link" value="Logout" onClick={this.props.logout} />
+        <a type="button" href="#" className="user-data__link" onClick={this.props.logout}>Logout</a>
       </div>
     );
   }
-}
+} 
 
 export default LogoutButton;

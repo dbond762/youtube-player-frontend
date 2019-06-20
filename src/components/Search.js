@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import './Search.css';
 import store from '../store';
 
 class Search extends Component {
@@ -28,7 +29,7 @@ class Search extends Component {
     return (
       <div className={`search ${this.props.className}`}>
         <input type="search" className="search__field" value={this.state.query} onChange={this.handleChange.bind(this)}/>
-        <input type="button" className="search__btn" value="Search" onClick={this.search.bind(this)}/>
+        <input type="button" className="search__btn" value="Go" onClick={this.search.bind(this)}/>
       </div>
     );
   }

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import store from '../store';
 import { withRouter } from 'react-router-dom';
 
+import './LoginPage.css';
+
 class LoginPage extends Component {
   state = {
     login: '',
@@ -68,16 +70,16 @@ class LoginPage extends Component {
           <h2 className="login-page__title">Login</h2>
           <div className="login-page__fieldset">
             <div className="login-page__field">
-              <label htmlFor="login">Login</label>
-              <input type="text" id="login" value={this.state.login} onChange={this.handleChangeLogin.bind(this)} />
+              <label className="login-page__label" htmlFor="login">Login</label>
+              <input className="login-page__input" type="text" id="login" value={this.state.login} onChange={this.handleChangeLogin.bind(this)} />
             </div>
             <div className="login-page__field">
-              <label htmlFor="password">Password</label>
-              <input type="password" id="password" value={this.state.password} onChange={this.handleChangePassword.bind(this)} />
+              <label className="login-page__label" htmlFor="password">Password</label>
+              <input className="login-page__input" type="password" id="password" value={this.state.password} onChange={this.handleChangePassword.bind(this)} />
             </div>
             <div className="login-page__buttons">
-              <input type="reset" value="Cancel" onClick={(e) => this.reset(e)} />
-              <input type="button" value="Login" onClick={(e) => this.login(e)} />
+              <input className="login-page__btn login-page__reset" type="reset" value="Reset" onClick={(e) => this.reset(e)} />
+              <input className="login-page__btn login-page__submit" type="button" value="Login" onClick={(e) => this.login(e)} />
             </div>
           </div>
         </form>

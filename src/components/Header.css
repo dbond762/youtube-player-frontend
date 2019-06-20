@@ -1,8 +1,13 @@
 .header {
   display: flex;
+  justify-content: space-between;
+  align-content: center;
   padding: 10px;
-  background: #000;  
+  background: #333;
 }
 .header__logo {
   width: 200px;
+}
+.header__search, .header__user-data {
+  margin: auto 0;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import store from '../../store'
 
+import './UserData.css';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
 
